@@ -8,10 +8,10 @@
  * @author PC
  */
 public class Persona {
-    protected String nombre;
-    protected String apellido;
-    protected int numeroDeCedula;
-    protected int numeroDeTelefono;
+    private String nombre;
+    private String apellido;
+    private int numeroDeCedula;
+    private int numeroDeTelefono;
     
     public Persona(String nombre, String apellido, int numeroDeCedula, int numeroDeTelefono) {
         this.nombre = nombre;
