@@ -12,4 +12,5 @@ public class Vendedor extends Persona {
     public Vendedor(String nombre, String apellido, int numeroDeCedula, int numeroDeTelefono) {
         super(nombre, apellido, numeroDeCedula, numeroDeTelefono);
     }
+   
 }

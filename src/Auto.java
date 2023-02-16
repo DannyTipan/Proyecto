@@ -8,5 +8,5 @@
  * @author stalin
  */
 public class Auto {
-    
+
 }
