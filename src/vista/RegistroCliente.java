@@ -14,6 +14,11 @@ public class RegistroCliente extends javax.swing.JFrame {
 
     public RegistroCliente() {
         initComponents();
+        lblErrorApellido.setVisible(false);
+        lblErrorCedula.setVisible(false);
+        lblErrorDireccion.setVisible(false);
+        lblErrorNombre.setVisible(false);
+        lblErrorTelefono.setVisible(false);
 
     }
 
@@ -81,13 +86,40 @@ public class RegistroCliente extends javax.swing.JFrame {
         lblDireccionCliente.setText("Direccion: ");
         jPanel2.add(lblDireccionCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 100, 30));
 
+        txtApellidoCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellidoClienteActionPerformed(evt);
+            }
+        });
         txtApellidoCliente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtApellidoClienteKeyReleased(evt);
             }
         });
         jPanel2.add(txtApellidoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 210, 30));
+
+        txtIdCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdClienteActionPerformed(evt);
+            }
+        });
+        txtIdCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtIdClienteKeyReleased(evt);
+            }
+        });
         jPanel2.add(txtIdCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 210, 30));
+
+        txtTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoActionPerformed(evt);
+            }
+        });
+        txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtTelefonoKeyReleased(evt);
+            }
+        });
         jPanel2.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 210, 30));
 
         txtNombreCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -164,14 +196,20 @@ public class RegistroCliente extends javax.swing.JFrame {
 
     private void txtNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreClienteActionPerformed
         // TODO add your handling code here:
+        if (Validador.esNombreCorrecto(txtNombreCliente.getText())) {
+            lblErrorNombre.setVisible(false);
+        } else {
+            lblErrorNombre.setText("El nombre no es valido");
+            lblErrorNombre.setVisible(true);
+        }
     }//GEN-LAST:event_txtNombreClienteActionPerformed
 
     private void txtNombreClienteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreClienteKeyReleased
         // TODO add your handling code here:
         if (Validador.esNombreCorrecto(txtNombreCliente.getText())) {
-
+            lblErrorNombre.setVisible(false);
         } else {
-            lblErrorNombre.setText("usuario incorrecto");
+            lblErrorNombre.setText("El nombre no es valido");
             lblErrorNombre.setVisible(true);
         }
 
@@ -180,9 +218,9 @@ public class RegistroCliente extends javax.swing.JFrame {
     private void txtApellidoClienteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoClienteKeyReleased
         // TODO add your handling code here:
         if (Validador.esApellidoCorrecto(txtApellidoCliente.getText())) {
-
+            lblErrorApellido.setVisible(false);
         } else {
-            lblErrorApellido.setText("usuario incorrecto");
+            lblErrorApellido.setText("Usuario incorrecto");
             lblErrorApellido.setVisible(true);
         }
 
@@ -196,6 +234,59 @@ public class RegistroCliente extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnRegistrarClienteMouseClicked
 
+    private void txtApellidoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoClienteActionPerformed
+        // TODO add your handling code here:
+        if (Validador.esApellidoCorrecto(txtApellidoCliente.getText())) {
+            lblErrorApellido.setVisible(false);
+        } else {
+            lblErrorApellido.setText("El apellido no es valido");
+            lblErrorApellido.setVisible(true);
+        }
+    }//GEN-LAST:event_txtApellidoClienteActionPerformed
+
+    private void txtIdClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdClienteActionPerformed
+        // TODO add your handling code here:
+        if (Validador.esCedulaCorrecta(txtIdCliente.getText())) {
+            lblErrorCedula.setVisible(false);
+        } else {
+            lblErrorCedula.setText("El número de cédula no es valido");
+            lblErrorCedula.setVisible(true);
+        }
+    }//GEN-LAST:event_txtIdClienteActionPerformed
+
+    private void txtIdClienteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdClienteKeyReleased
+        // TODO add your handling code here:
+        if (Validador.esCedulaCorrecta(txtIdCliente.getText())) {
+            lblErrorCedula.setVisible(false);
+        } else {
+            lblErrorCedula.setText("El número de cédula no es valido");
+            lblErrorCedula.setVisible(true);
+        }
+    }//GEN-LAST:event_txtIdClienteKeyReleased
+
+    private void txtTelefonoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoKeyReleased
+        // TODO add your handling code here:
+        if (Validador.esNumeroCorrecto(txtTelefono.getText())) {
+            lblErrorTelefono.setVisible(false);
+        } else {
+            lblErrorTelefono.setText("Numero de telefono incorrecto");
+            lblErrorTelefono.setVisible(true);
+        }
+    }//GEN-LAST:event_txtTelefonoKeyReleased
+
+    private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoActionPerformed
+        // TODO add your handling code here:
+        
+        if (Validador.esNumeroCorrecto(txtTelefono.getText())) {
+            lblErrorTelefono.setVisible(false);
+        } else {
+            lblErrorTelefono.setText("Numero de telefono incorrecto");
+            lblErrorTelefono.setVisible(true);
+        }
+    }//GEN-LAST:event_txtTelefonoActionPerformed
+
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

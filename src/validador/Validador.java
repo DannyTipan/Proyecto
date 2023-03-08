@@ -12,16 +12,16 @@ public class Validador {
     
     public static boolean esNombreCorrecto(String nombre) {
 
-        return nombre.matches("^[A-ZAa-z]{20}$");
+        return nombre.matches("[a-zA-z]*");
     }
     public static boolean esApellidoCorrecto(String apellido) {
 
-        return apellido.matches("^[A-ZAa-z]{20}$");
+        return apellido.matches("[a-zA-z]*");
     }
     
     public static boolean esNumeroCorrecto(String contacto){
         
-        return contacto.matches("^([0-9]{10})$");
+        return contacto.matches("^[09]{2}+[0-9]{8}$");
     }
     public static boolean esCedulaCorrecta(String cedula){
         

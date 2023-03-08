@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
+
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -20,11 +21,11 @@ public class Usuario extends javax.swing.JFrame {
     public Usuario() {
         initComponents();
         this.setLocationRelativeTo(jLabel2);
-        ImageIcon image1= new ImageIcon(getClass().getResource("/icon/loginIcon.png"));
-        ImageIcon image2= new ImageIcon(getClass().getResource("/icon/carrolujo.jpg"));
-        Icon fondo1= new ImageIcon(image1.getImage().getScaledInstance( lblImage1.getWidth(), lblImage1.getHeight(), Image.SCALE_DEFAULT));
+        ImageIcon image1 = new ImageIcon(getClass().getResource("/icon/loginIcon.png"));
+        ImageIcon image2 = new ImageIcon(getClass().getResource("/icon/carrolujo.jpg"));
+        Icon fondo1 = new ImageIcon(image1.getImage().getScaledInstance(lblImage1.getWidth(), lblImage1.getHeight(), Image.SCALE_DEFAULT));
         lblImage1.setIcon(fondo1);
-        Icon fondo2= new ImageIcon(image2.getImage().getScaledInstance( jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
+        Icon fondo2 = new ImageIcon(image2.getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_DEFAULT));
         jLabel2.setIcon(fondo2);
         this.repaint();
     }
@@ -59,12 +60,12 @@ public class Usuario extends javax.swing.JFrame {
 
         lblPassword.setBackground(new java.awt.Color(238, 112, 82));
         lblPassword.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
-        lblPassword.setText("Password: ");
-        jpIngreso.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 85, 33));
+        lblPassword.setText("Contraseña: ");
+        jpIngreso.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 110, 33));
 
         lblUser.setBackground(new java.awt.Color(0, 0, 0));
         lblUser.setFont(new java.awt.Font("Rockwell", 1, 14)); // NOI18N
-        lblUser.setText("User: ");
+        lblUser.setText("Usuario: ");
         jpIngreso.add(lblUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 85, 33));
 
         lblImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/loginIcon.png"))); // NOI18N
@@ -139,28 +140,27 @@ public class Usuario extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
-    
+
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void btnIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseClicked
         // TODO add your handling code here:
-         String Usuarios = "juan";
+        String Usuarios = "juan";
         String Claves = "234";
-        
-      
+
         String usuario = txtUsuario.getText();
-        String contrasenia= txtContrasenia.getText();
-        
-        if(usuario.equals(Usuarios)&& contrasenia.equals(Claves)){
-              
+        String contrasenia = txtContrasenia.getText();
+
+        if (usuario.equals(Usuarios) && contrasenia.equals(Claves)) {
+            JOptionPane.showMessageDialog(null, "Bienvenido");
             RegistroCliente r = new RegistroCliente();
-                r.setVisible(true);   
-                dispose();
-          
-        }else{
-            JOptionPane.showMessageDialog(null, "bienvenido");
+            r.setVisible(true);
+            dispose();
+            
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuario incorrecto");
         }
-        
+
     }//GEN-LAST:event_btnIngresarMouseClicked
 
     /**
