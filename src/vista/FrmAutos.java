@@ -325,7 +325,7 @@ public class FrmAutos extends javax.swing.JFrame {
         }
 
         if (!encontrado) {
-            JOptionPane.showMessageDialog(rootPane, "No Disponible");
+            JOptionPane.showMessageDialog(rootPane, "Auto no disponible");
         }
 
 
@@ -437,7 +437,7 @@ public class FrmAutos extends javax.swing.JFrame {
         // Iterar sobre las filas seleccionadas
         for (int fila : filasSeleccionadas) {
             // Obtener el modelo de la tabla y la fila correspondiente a la selección
-            DefaultTableModel dtmAutos = (DefaultTableModel) tblAutos.getModel();
+            dtmAutos = (DefaultTableModel) tblAutos.getModel();
             Object[] filaSeleccionada = new Object[dtmAutos.getColumnCount()];
 
             for (int i = 0; i < dtmAutos.getColumnCount(); i++) {

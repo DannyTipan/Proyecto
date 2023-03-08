@@ -9,25 +9,16 @@
  */
 public class Factura {
     
-    private String fechaEmision;
     private String formaPago;
     private double numeroFactura;
 
-    public Factura(String fechaEmision, String formaPago, double numeroFactura) {
-        this.fechaEmision = fechaEmision;
+    public Factura(String formaPago, double numeroFactura) {
+
         this.formaPago = formaPago;
         this.numeroFactura = numeroFactura;
     }
 
     public Factura() {
-    }
-
-    public String getFechaEmision() {
-        return fechaEmision;
-    }
-
-    public void setFechaEmision(String fechaEmision) {
-        this.fechaEmision = fechaEmision;
     }
 
     public String getFormaPago() {

@@ -4,6 +4,8 @@
  */
 package vista;
 
+import validador.Fecha;
+
 /**
  *
  * @author MARGARITA
@@ -15,6 +17,15 @@ public class FrmFactura extends javax.swing.JFrame {
      */
     public FrmFactura() {
         initComponents();
+        lblNombreC.setVisible(false);
+        lblFechaActual.setVisible(false);
+        lblNumeroFacturaActual.setVisible(false);
+        lblTelefonoC.setVisible(false);
+        lblNumeroC.setVisible(false);
+        lblMetodo.setVisible(false);
+        lblDireccion.setVisible(false);
+        
+
     }
 
     /**
@@ -26,21 +37,134 @@ public class FrmFactura extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        lblDireccion = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        lblNombreC = new javax.swing.JLabel();
+        lblTelefonoFactura = new javax.swing.JLabel();
+        lblMetodo = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        lblNumeroC = new javax.swing.JLabel();
+        lblMetodoPago = new javax.swing.JLabel();
+        lblTelefonoC = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        lblnumeroFactura = new javax.swing.JLabel();
+        lblNumeroFacturaActual = new javax.swing.JLabel();
+        lblFecha = new javax.swing.JLabel();
+        lblFechaActual = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 562, Short.MAX_VALUE)
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Información del cliente", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setText("Nombre:");
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 24, -1, -1));
+
+        lblDireccion.setText("jLabel3");
+        jPanel3.add(lblDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 80, 67, -1));
+
+        jLabel4.setText("Dirección:");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 80, -1, -1));
+
+        lblNombreC.setText("jLabel3");
+        jPanel3.add(lblNombreC, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 24, 67, -1));
+
+        lblTelefonoFactura.setText("Teléfono:");
+        jPanel3.add(lblTelefonoFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, -1));
+
+        lblMetodo.setText("jLabel7");
+        jPanel3.add(lblMetodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, -1, -1));
+
+        jLabel8.setText("Número de Cédula:");
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 52, -1, -1));
+
+        lblNumeroC.setText("jLabel9");
+        jPanel3.add(lblNumeroC, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 52, -1, -1));
+
+        lblMetodoPago.setText("Método de pago:");
+        jPanel3.add(lblMetodoPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, -1, -1));
+
+        lblTelefonoC.setText("jLabel11");
+        jPanel3.add(lblTelefonoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, -1, -1));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("POLICONSECIONARIA");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 13, 127, -1));
+
+        lblnumeroFactura.setText("FACTURA N°");
+        jPanel2.add(lblnumeroFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(422, 35, -1, -1));
+
+        lblNumeroFacturaActual.setText("lbl");
+        jPanel2.add(lblNumeroFacturaActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 35, 75, -1));
+
+        lblFecha.setText("Fecha:");
+        jPanel2.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 35, 46, -1));
+
+        lblFechaActual.setText("jLabel2");
+        jPanel2.add(lblFechaActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 35, -1, -1));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 466, Short.MAX_VALUE)
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(158, Short.MAX_VALUE))
         );
+
+        jPanel1.add(jPanel4, java.awt.BorderLayout.PAGE_END);
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Fecha fe = new Fecha();
+        lblFechaActual.setText(fe.toString());
+        lblFechaActual.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    /**
+     * Metodo que coloca la fecha actual en cada factura
+     */
+    /*private void colocarFecha() {
+        Fecha fe = new Fecha();
+        lblFechaActual.setText(fe.toString());
+        lblFechaActual.setVisible(true);
+    }*/
 
     /**
      * @param args the command line arguments
@@ -78,5 +202,25 @@ public class FrmFactura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblDireccion;
+    private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblFechaActual;
+    private javax.swing.JLabel lblMetodo;
+    private javax.swing.JLabel lblMetodoPago;
+    private javax.swing.JLabel lblNombreC;
+    private javax.swing.JLabel lblNumeroC;
+    private javax.swing.JLabel lblNumeroFacturaActual;
+    private javax.swing.JLabel lblTelefonoC;
+    private javax.swing.JLabel lblTelefonoFactura;
+    private javax.swing.JLabel lblnumeroFactura;
     // End of variables declaration//GEN-END:variables
 }
