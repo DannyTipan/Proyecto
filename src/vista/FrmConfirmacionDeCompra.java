@@ -182,6 +182,11 @@ private void agregarListaCompletaALaTabla() {
 
         }
         String metodoDePago = cmbMetodoDePago.getSelectedItem().toString();
+        
+        FrmFactura factura = new FrmFactura();
+        factura.setVisible(true);
+        this.dispose();
+        
     }//GEN-LAST:event_btnConfirmarCompraActionPerformed
 
     /**

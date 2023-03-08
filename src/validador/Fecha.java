@@ -12,10 +12,6 @@ import java.time.LocalDateTime;
  */
 public class Fecha {
 
-    /**
-     * variable de clase que irá incrementando en uno por cada instancia creada
-     */
-    private static int identificador;
     private final int dia;
     private final int mes;
     private final int año;
@@ -25,11 +21,11 @@ public class Fecha {
         dia = fechaActual.getDayOfMonth();
         mes = fechaActual.getMonthValue();
         año = fechaActual.getYear();
-        identificador++;
+
     }
 
     @Override
     public String toString() {
-        return dia + "-" + mes + "-" + año + "-" + identificador;
+        return dia + "-" + mes + "-" + año;
     }
 }
